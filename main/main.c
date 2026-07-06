@@ -19,9 +19,11 @@ int i;
         *col_name_flag = 0;
     }
     printf("\n|");
-    for(i=0; i<argc; i++){
+    for(i=0; i<argc-1; i++){
         printf(" %-10.10s |", argv[i] ? argv[i] : "NULL");
     }
+    printf(" %-30.30s |", argv[argc-1] ? argv[argc-1] : "NULL");
+
     return 0;
 }
 
